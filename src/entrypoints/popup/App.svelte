@@ -7,10 +7,10 @@
 
   getBalance().then(amount => balance = amount);
 
-  const fiveMinutes = 5 * 60 * 1000;
+  const twoMinutes = 2 * 60 * 1000;
   setInterval(() => {
     getBalance().then(amount => balance = amount);
-  }, fiveMinutes);
+  }, twoMinutes);
 </script>
 
 <main>
