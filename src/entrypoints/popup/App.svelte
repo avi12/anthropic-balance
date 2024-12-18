@@ -2,7 +2,7 @@
   let balance = $state<number>(0);
 
   async function getBalance() {
-    return (await browser.runtime.sendMessage({type: 'get-balance'})).amount;
+    return (await browser.runtime.sendMessage({type: "get-balance"}))!.amount;
   }
 
   $effect(() => {
@@ -20,7 +20,7 @@
 
   <div class="card">
     {#if balance > 0}
-      {new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(balance / 100)}
+      {new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(balance / 100)}
     {:else}
       Loading...
     {/if}
