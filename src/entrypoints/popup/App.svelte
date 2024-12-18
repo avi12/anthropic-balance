@@ -30,5 +30,6 @@
 <style>
   .card {
     font-size: 2rem;
+    font-variant-numeric: tabular-nums;
   }
 </style>
