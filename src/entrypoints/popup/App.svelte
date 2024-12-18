@@ -5,14 +5,12 @@
     return (await browser.runtime.sendMessage({type: "get-balance"}))!.amount;
   }
 
-  $effect(() => {
-    getBalance().then(amount => balance = amount);
+  getBalance().then(amount => balance = amount);
 
-    let fiveMinutes = 5 * 60 * 1000;
-    setInterval(() => {
-      getBalance().then(amount => balance = amount);
-    }, fiveMinutes);
-  })
+  const fiveMinutes = 5 * 60 * 1000;
+  setInterval(() => {
+    getBalance().then(amount => balance = amount);
+  }, fiveMinutes);
 </script>
 
 <main>
