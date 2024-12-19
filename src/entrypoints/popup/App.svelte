@@ -14,7 +14,7 @@
 </script>
 
 <main>
-  <h1>Anthropic Balance</h1>
+  <h1><a href="https://console.anthropic.com/settings/billing" target="_blank">Anthropic Balance</a></h1>
 
   <div class="card">
     {#if balance > 0}
